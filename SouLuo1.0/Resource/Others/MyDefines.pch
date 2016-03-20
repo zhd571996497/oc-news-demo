@@ -1,0 +1,48 @@
+//
+//  MyDefines.pch
+//  SouLuo1.0
+//
+//  Created by dllo on 15/9/10.
+//  Copyright (c) 2015年 LiuShuai. All rights reserved.
+//
+
+#ifndef SouLuo1_0_MyDefines_pch
+#define SouLuo1_0_MyDefines_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+/**
+ *  屏幕宽与高
+ */
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+/**
+ *  适配宽与高比例值
+ */
+#define RATIO_WIDTH SCREEN_WIDTH / 375
+#define RATIO_HEIGHT SCREEN_HEIGHT / 667
+/**
+ *  自定义颜色RGB
+ */
+#define MYCOLOR_GRB(r,g,b,a) [UIColor colorWithRed:r/255. green:g/255. blue:b/255. alpha:a]
+
+//获取系统版本
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+#define CurrentSystemVersion [[UIDevice currentDevice] systemVersion]
+
+#define padding 20//每两个button的间距
+#define itemPerLine 4//每行个数
+#define kItemW (SCREEN_WIDTH-padding*(itemPerLine+1))/itemPerLine//每个buttond的宽度
+#define kItemH 25 //button的高度
+
+typedef enum{
+    topViewClick = 0,
+    FromTopToTop = 1,
+    FromTopToTopLast = 2,
+    FromTopToBottomHead = 3,
+    FromBottomToTopLast = 4
+} animateType;
+
+#endif
